@@ -1,0 +1,83 @@
+Lab Summary – What Was Learned in This Lab
+
+This lab helped in understanding and applying the core object-oriented programming (OOP) concepts in Java through multiple structured exercises based on real-world scenarios such as books and hotel room management systems.
+
+Encapsulation and Data Validation
+
+The lab demonstrated how encapsulation is achieved by declaring class data members as private and accessing them through public getter and setter methods. It also showed how validation logic can be added inside setter methods to maintain data integrity, such as ensuring that a book’s price is always a positive value.
+
+Example concept:
+
+private double price;
+
+public void setPrice(double price) {
+    if (price > 0) {
+        this.price = price;
+    }
+}
+
+Constructor Overloading
+
+The concept of constructor overloading was learned by creating multiple constructors in the same class with different parameter lists. This allows objects to be initialized in different ways depending on the available data.
+
+Example:
+
+Room(int roomNumber, String roomType) { }
+Room(int roomNumber, String roomType, double basePrice) { }
+
+
+This improves flexibility while creating objects.
+
+Inheritance and the super Keyword
+
+The lab clearly illustrated inheritance by creating derived classes from a base class. For example, a DeluxeRoom class inherits properties of the Room class and adds extra features like Wi-Fi and breakfast. The use of the super keyword showed how base class constructors are invoked from derived classes.
+
+Example:
+
+class DeluxeRoom extends Room {
+    boolean freeWifi;
+    boolean breakfast;
+}
+
+Runtime Polymorphism
+
+Through the hotel room booking system, the lab explained runtime polymorphism using method overriding. A base class reference was used to refer to different derived class objects, and the correct calculateTariff() method was called at runtime based on the object type.
+
+Example:
+
+Room r = new LuxuryRoom();
+r.calculateTariff();
+
+
+This demonstrated dynamic method dispatch, a key feature of polymorphism.
+
+Abstraction Using Abstract Classes
+
+The lab introduced abstract classes to represent general concepts while forcing subclasses to provide specific implementations. Common data members and abstract methods were defined in the base class.
+
+Example:
+
+abstract class Room {
+    abstract double calculateTariff();
+}
+
+
+This ensures consistency across all derived classes.
+
+Interface-Based Design
+
+The use of interfaces showed how additional functionalities can be defined separately from class hierarchies. Interfaces such as Amenities declared methods related to services like Wi-Fi and breakfast, which were then implemented by room classes.
+
+Example:
+
+interface Amenities {
+    void provideWifi();
+    void provideBreakfast();
+}
+
+
+This promoted loose coupling and better design.
+
+Overall Understanding
+
+Overall, this lab provided a strong practical understanding of encapsulation, inheritance, constructor overloading, polymorphism, abstraction, and interfaces. It showed how these OOP concepts work together to build well-structured, reusable, and scalable Java applications, especially in real-world systems like hotel management and booking applications.
