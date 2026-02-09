@@ -71,5 +71,5 @@ public class Q1 {
  * Flow should be like:
  * Summary Concept-snippet Concept - snippet
  * Dont make it too long though - should have around 3-4 main concepts since
- * snippets are expected to be big
+ * snippets are expected to be big and from the code provided
  */
